@@ -30,11 +30,11 @@ function Dashboard() {
     
 
     const handleClickOpenedit = () => {
-        setOpen(true);
+        setOpenedit(true);
     };
 
     const handleCloseedit = () => {
-        setOpen(false);
+        setOpenedit(false);
     };
 
 
@@ -63,7 +63,7 @@ function Dashboard() {
             .then(response => response.json())
             .then(data => { 
                 console.log("user", data)
-                handleClose()
+                handleCloseedit()
                 setEmail('')
                 setFName('')
                 setLName('')
@@ -148,7 +148,7 @@ function Dashboard() {
             </Dialog>
 
             <Dialog open={openedit} onClose={handleCloseedit}>
-                <DialogTitle>Add User</DialogTitle>
+                <DialogTitle>Edit User</DialogTitle>
                 <DialogContent>
                     <TextField
                         autoFocus
