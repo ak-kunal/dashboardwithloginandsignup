@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles.css';
-import NotificationIcon from '../../assets/icons/notification.svg';
-import SettingsIcon from '../../assets/icons/settings.svg';
 
 function DashboardHeader ({ btnText, onClick }) {
+
+    const name = localStorage.getItem('username', '')
     return(
         <div className='dashbord-header-container'>
             {btnText && 
@@ -12,17 +13,8 @@ function DashboardHeader ({ btnText, onClick }) {
             }
 
             <div className='dashbord-header-right'>
-                <img 
-                    src={NotificationIcon}
-                    alt='notification-icon'
-                    className='dashbord-header-icon' />
-                <img 
-                    src={SettingsIcon}
-                    alt='settings-icon'
-                    className='dashbord-header-icon' />
-                <img
-                    className='dashbord-header-avatar'
-                    src='https://reqres.in/img/faces/9-image.jpg' />
+                <text className='nametext'>Hii {name}</text>
+                <Link to="/login">Log Out</Link>
             </div>
         </div>
     )

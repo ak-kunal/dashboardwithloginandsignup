@@ -1,25 +1,25 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
 
-import SideBar from './components/Sidebar';
-import sidebar_menu from './constants/sidebar-menu';
+
 
 import './App.css';
-import Orders from './pages/Orders';
+import Dashboard from './pages/Dashboard';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 function App () {
   return(
     <Router>
       <div className='dashboard-container'>
-        <SideBar menu={sidebar_menu} />
+        {/* <SideBar menu={sidebar_menu} /> */}
           
           <div className='dashboard-body'>
               <Routes>
-                  <Route path="*" element={<div></div>} />
-                  <Route exact path="/" element={<div></div>} />
-                  <Route exact path="/orders" element={< Orders/>} />
-                  <Route exact path="/locations" element={<div></div>} />
-                  <Route exact path="/profile" element={<div></div>} />
+                  <Route path="*" element={<div>No Page found</div>} />
+                  <Route exact path="/login" element={<Login />} />
+                  <Route exact path="/" element={<Signup />} />
+                  <Route exact path="/dashboard" element={<Dashboard />} />
               </Routes>
           </div>
       </div>

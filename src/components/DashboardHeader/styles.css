@@ -5,6 +5,18 @@
     align-items: center;
     justify-content: space-between;
 }
+.nametext {
+    text-align: left;
+    padding: 12px 24px;
+    background: transparent;
+    box-shadow: none;
+    color: #2D83B5;
+    font-size: 0.90rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0.035em;
+    border-bottom: 0.05rem solid rgb(240, 242, 245);
+}
 .dashbord-header-btn {
     padding: 0.8em;
     padding-left: 2em;

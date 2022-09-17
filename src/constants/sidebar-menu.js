@@ -10,24 +10,6 @@ const sidebar_menu = [
         path: '/',
         title: 'Dashboard',
     },
-    {
-        id: 2,
-        icon: ProductIcon,
-        path: '/orders',
-        title: 'Orders',
-    },
-    {
-        id: 3,
-        icon: ShippingIcon,
-        path: '/products',
-        title: 'Products',
-    },
-    {
-        id: 4,
-        icon: UserIcon,
-        path: '/profile',
-        title: 'My account',
-    }
 ]
 
 export default sidebar_menu;
